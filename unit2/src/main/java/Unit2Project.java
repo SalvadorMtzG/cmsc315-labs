@@ -21,7 +21,7 @@ import java.util.Queue;
 public class Unit2Project {
 
     private Queue<String> ticketQueue = new ArrayDeque<>();
-    public Deque<String> actionStack = new ArrayDeque<>();
+    private Deque<String> actionStack = new ArrayDeque<>();
 
     /**
      * Adds a new ticket to the end of the queue.

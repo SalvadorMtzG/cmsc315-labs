@@ -53,7 +53,6 @@ public class Unit2UndoLastActionTest {
         app.processNextTicket(); // A
         app.processNextTicket(); // B
         app.processNextTicket(); // C
-        System.out.print(app.actionStack);
 
         // Undo last in (C), should come out first
         assertEquals("Processed ticket: Ticket C",
