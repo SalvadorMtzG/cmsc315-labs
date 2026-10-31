@@ -25,20 +25,23 @@ public class Unit3Project {
 
     public void addSong(String title) {
         // TODO: Add the provided song to the end of the playlist.
+        playlist.add(title);
+
     }
 
     public void insertSong(int index, String title) {
         // TODO: Insert the song at a specific position if the index is valid.
+        playlist.add(index, title);
     }
 
     public String removeSong(int index) {
         // TODO: Remove and return the song at the specified index.
-        return null;
+        return playlist.remove(index);
     }
 
     public String getSpecificSong(int index) {
         // TODO: Return the song stored at the specified index.
-        return null;
+        return playlist.get(index);
     }
 
     public int size() {
@@ -50,6 +53,10 @@ public class Unit3Project {
         // Display "Current playlist:"
         // Traverse the playlist using a loop
         // Print each index and song title
+        System.out.println("Current playlist:");
+        for (int i = 0; i < playlist.size(); i++ ){
+            System.out.println(i + ": " + playlist.get(i));
+        }
     }
 
 
@@ -59,6 +66,8 @@ public class Unit3Project {
         app.addSong("Song A");
         app.addSong("Song B");
         app.insertSong(1, "Song X");
+
+        app.displaySongs();
 
         System.out.println("Playlist size: " + app.size());
         System.out.println("Song at index 1: " + app.getSpecificSong(1));
